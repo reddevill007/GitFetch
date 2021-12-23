@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub</title>
+    <link rel="stylesheet" href="style.css" />
+    <!---- Font Awesome Cdn Linkage ------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <!------- Favicon Linkage --------->
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="wavy">
+        <span style="--i: 1">L</span>
+        <span style="--i: 2">o</span>
+        <span style="--i: 3">a</span>
+        <span style="--i: 4">d</span>
+        <span style="--i: 5">i</span>
+        <span style="--i: 6">n</span>
+        <span style="--i: 7">g</span>
+        <span style="--i: 8">.</span>
+        <span style="--i: 9">.</span>
+        <span style="--i: 10">.</span>
+      </div>
+    </div>
+
+    <div class="main">
+      <h1>GitFetch</h1>
+      <form id="myForm">
+        <div id="input">
+          <input type="text" id="search" placeholder="Search" />
+        </div>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div class="result_box" id="result_box">
+      <div id="close_details"><i class="fas fa-times"></i></div>
+      <div id="result">
+        <img src="bg.png" height="250px" width="250px" alt="" id="avatar" />
+        <h2 id="username">Username</h2>
+        <h1 id="name">Name</h1>
+        <div class="parabox">
+          <p id="bio">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora vel
+            tenetur fuga tempore, quaerat nam consectetur.
+          </p>
+          <div class="up">Bio</div>
+        </div>
+        <div class="profile_details">
+          <div id="follow"></div>
+          <div id="repo"></div>
+        </div>
+        <div class="social">
+          <a href="#" target="blank" id="visit"><i class="fab fa-github"></i></a>
+          <a href="#" target="blank" id="tweet"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="blank" id="blog"><i class="fas fa-globe-europe"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="result_not_found" id="result_not_found">
+      <div id="close"><i class="fas fa-times"></i></div>
+      <div class="img">
+        <img src="ch.png" alt="image" />
+      </div>
+      <div class="details">
+        <h1>Oops!!! User <span id="id"></span> not found</h1>
+        <p>The username name entered by you was invalid please try again with the valid username</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
