@@ -85,7 +85,7 @@ body {
   top: 0;
   left: 0;
   color: #fff;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -107,7 +107,7 @@ body {
 }
 
 .result_not_found .img {
-  width: 30%;
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -115,18 +115,22 @@ body {
 }
 
 .result_not_found .img img {
-  width: 100%;
+  width: 80%;
 }
 
 .result_not_found .details {
-  width: 70%;
+  width: 50%;
+  padding: 20px;
   text-align: center;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .result_not_found .details h1 {
-  margin-bottom: 20px;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .result_not_found .details p {
@@ -134,7 +138,6 @@ body {
 }
 
 .result_not_found .details h1 span {
-  font-size: 40px;
   color: #64ffda;
 }
 
@@ -161,28 +164,28 @@ body {
 }
 
 #result .parabox {
-    position: relative;
-    border: 2px solid #3f475a;
-    border-radius: 5px;
-    padding: 10px;
-    border-top-left-radius: 0;
+  position: relative;
+  border: 2px solid #3f475a;
+  border-radius: 5px;
+  padding: 10px;
+  border-top-left-radius: 0;
 }
 
 #result .parabox .up {
-    position: absolute;
-    top: -25px;
-    left: -2px;
-    height: 25px;
-    width: fit-content;
-    border: 2px solid #3f475a;
-    border-radius: 5px;
-    border-bottom: none;
-    border-bottom-left-radius: 0;
-    padding: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #64ffda;
+  position: absolute;
+  top: -25px;
+  left: -2px;
+  height: 25px;
+  width: fit-content;
+  border: 2px solid #3f475a;
+  border-radius: 5px;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #64ffda;
 }
 
 #myForm {
@@ -198,6 +201,9 @@ body {
   border: none;
   border-radius: 5px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #myForm #input input {
@@ -219,11 +225,11 @@ body {
 button {
   height: 50px;
   width: 100px;
-  transform: translateX(-100px);
   outline: none;
   border: none;
   background: #64ffda;
   border-radius: 5px;
+  margin-left: 5px;
   cursor: pointer;
   color: #242730;
 }
@@ -295,33 +301,73 @@ a {
 }
 
 .profile_details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 #follow,
 #repo {
-    color: #64ffda;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
+  color: #64ffda;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
 }
 
 #follow i,
 #repo i {
-    width: 45px;
-    height: 45px;
-    background: #0a192f;
-    border-radius: 50%;
-    border: 2px solid #64ffda;
-    color: #64ffda;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  background: #0a192f;
+  border-radius: 50%;
+  border: 2px solid #64ffda;
+  color: #64ffda;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .result_not_found {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .result_not_found .img,
+  .result_not_found .details {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .result_not_found .img img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  .result_not_found .details h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  #myForm {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #myForm button {
+    width: 70%;
+    height: 40px;
+  }
+
+  #myForm #input {
+    width: 90%;
+    height: 40px;
+  }
 }
